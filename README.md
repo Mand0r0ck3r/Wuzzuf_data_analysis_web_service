@@ -9,7 +9,7 @@ then the following information was analyzed the displayed:
   5) factorized the YearExp feature and converted it to numbers in a new column
 then a webservice was created using spring boot to help display the results
 
-### Team members.
+### Team members:
 #### Muhammed Mamdouh Salah.
 #### Ahmed Samir.
 #### Mahmoud Fadel.
