@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<title> Wuzzuf Jobs Java Project </title>
+<head>
+  <p style="font-weight: bold; font-size: 35px;">Wuzzuf Jobs Java Project</p>
+  <p style="font-style: italic; font-size: 15;">  This service has 2 modes </p>
+  <p style="font-style: italic; font-size: 15;">  -  To view the data as an HTML page press "html" button </p>
+  <p style="font-style: italic; font-size: 15;">  -  To view the data as an json format press "json" button </p>
+  <p style="font-style: italic; font-size: 15;">  -  the json is in the form of a Hashmap where the keys are indices and values are rows in form of List </p>
+  <p style="font-style: italic; font-size: 15;">  -  the key "cols" holds the column names </p>
+  <br><p style="font-style: italic; font-size: 15;">  Charts are displayed in html format only </p>
+  <p style="font-style: italic; font-size: 15;">  you can view factorized columns in Full DataFrame option </p>
+  <p style="font-style: italic; font-size: 15;">  * Specify the number of rows first, default number of rows is 10 </p>
+  <p style="font-style: italic; font-size: 15;">  * For all rows enter 0 in the rows text box</p>
+
+
+  <script type ="text/javascript">
+    function fc1(){
+      var myName = document.getElementById("txt1").value;
+      window.open("http://localhost:8080/data?req=full&rows="+myName)
+    }
+    function fc2(){
+      window.open("http://localhost:8080/data?req=summary")
+    }
+    function fc3(){
+      window.open("http://localhost:8080/data?req=structure")
+    }
+    function fc4(){
+      var myName = document.getElementById("txt1").value;
+      window.open("http://localhost:8080/data?req=companies&rows="+myName)
+    }
+    function fc5(){
+      var myName = document.getElementById("txt1").value;
+      window.open("http://localhost:8080/data?req=jobs&rows="+myName)
+    }
+    function fc6(){
+      var myName = document.getElementById("txt1").value;
+      window.open("http://localhost:8080/data?req=areas&rows="+myName)
+    }
+    function fc7(){
+      var myName = document.getElementById("txt1").value;
+      window.open("http://localhost:8080/data?req=skills&rows="+myName)
+    }
+    function fc8(){
+      var myName = document.getElementById("txt1").value;
+      window.open("http://localhost:8080/forclient/full?rows="+myName)
+    }
+    function fc9(){
+      var myName = document.getElementById("txt1").value;
+      window.open("http://localhost:8080/forclient/summary")
+    }
+    function fc10(){
+      var myName = document.getElementById("txt1").value;
+      window.open("http://localhost:8080/forclient/structure")
+    }
+    function fc11(){
+      var myName = document.getElementById("txt1").value;
+      window.open("http://localhost:8080/forclient/companies?rows="+myName)
+    }
+    function fc12(){
+      var myName = document.getElementById("txt1").value;
+      window.open("http://localhost:8080/forclient/jobs?rows="+myName)
+    }
+    function fc13(){
+      var myName = document.getElementById("txt1").value;
+      window.open("http://localhost:8080/forclient/areas?rows="+myName)
+    }
+    function fc14(){
+      var myName = document.getElementById("txt1").value;
+      window.open("http://localhost:8080/forclient/skills?rows="+myName)
+    }
+  </script>
+</head>
+<body>
+<div>
+  <label>Enter Number of rows</label>
+  <input type = 'text' placeholder="default:10" id ='txt1'>
+</div>
+<br>
+<div>
+  <label style ="font-size: 20px;">Full DataFrame</label>
+  <button style="margin-left: 158px; width: 100px;" id = 'button1' onclick="fc1()">html</button>
+  <button style ="width: 100px;" id = 'button8' onclick="fc8()">json</button>
+</div>
+<br>
+<div>
+  <label style ="font-size: 20px;">DataFrame Summary</label>
+  <button style="margin-left: 112px; width: 100px" id = 'button2' onclick="fc2()">html</button>
+  <button style ="width: 100px;" id = 'button9' onclick="fc9()">json</button>
+</div>
+<br>
+<div>
+  <label style ="font-size: 20px;">DataFrame Structure</label>
+  <button style="margin-left: 117px; width: 100px" id = 'button3' onclick="fc3()">html</button>
+  <button style ="width: 100px;" id = 'button10' onclick="fc10()">json</button>
+</div>
+<br>
+<div>
+  <label style ="font-size: 20px;">Top Companies with Pie Chart</label>
+  <button style="margin-left: 38px; width: 100px" id = 'button4' onclick="fc4()">html</button>
+  <button style ="width: 100px;" id = 'button11' onclick="fc11()">json</button>
+</div>
+<br>
+<div>
+  <label style ="font-size: 20px;">Top Jobs with Bar Chart</label>
+  <button style="margin-left: 89px; width: 100px" id = 'button5' onclick="fc5()">html</button>
+  <button style ="width: 100px;" id = 'button12' onclick="fc12()">json</button>
+</div>
+<br>
+<div>
+  <label style ="font-size: 20px;">Top Areas with Bar Chart</label>
+  <button style="margin-left: 79px; width: 100px" id = 'button6' onclick="fc6()">html</button>
+  <button style ="width: 100px;" id = 'button13' onclick="fc13()">json</button>
+</div>
+<br>
+<div>
+  <label style ="font-size: 20px;">Top Skills</label>
+  <button style="margin-left: 203px; width: 100px" id = 'button7' onclick="fc7()">html</button>
+  <button style ="width: 100px;" id = 'button14' onclick="fc14()">json</button>
+</div>
+</body>
+</html>
